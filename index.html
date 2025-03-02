@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>請稍後...</title>
+    <style>
+        /* 讓整個頁面置中 */
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background-color: rgb(205, 201, 201);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            user-select: none;
+        }
+
+        /* 標題樣式 */
+        .title {
+            font-size: 3em;
+            font-weight: bold;
+            color: black;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 1em;
+            font-weight: bold;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        /* GIF 圖片樣式 */
+        .loading-gif {
+            width: 300px; /* 放大 GIF */
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        /* 重新整理按鈕樣式 */
+        .refresh-btn {
+            font-size: 1em;
+            padding: 5px 10px;
+            border: none;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* 按鈕 hover 效果 */
+        .refresh-btn:hover {
+            background-color: darkgray;
+        }
+    </style>
+</head>
+
+<body>
+<!-- 當機標題 -->
+<h1 class="title">緊急搶修中，請稍候...இдஇ</h1>
+
+<p class="message">
+    由於伺服器維護或技術問題，維基百科目前暫時無法存取。<br>
+    我們的工程團隊已在努力修復，請稍後再試。<br>
+    若問題持續，請稍後幾分鐘後重新整理此頁面。<br>
+    你也可以關注我們的 <a href="https://twitter.com/Wikipedia">官方 Twitter</a> 獲取最新消息。
+</p>
+
+<!-- 當機動畫 GIF -->
+<img src="imgs/loading.gif" alt="載入中..." class="loading-gif">
+
+<!-- 重新整理按鈕 -->
+<button class="refresh-btn" onclick="location.reload();">重新整理</button>
+</body>
+</html>
